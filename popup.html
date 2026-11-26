@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <span class="dot"></span>
+      <h1>Acrylic Wallpaper</h1>
+      <span id="version" class="version"></span>
+    </header>
+
+    <section class="row">
+      <div class="label">
+        <strong>在网站上启用</strong>
+        <span>把壁纸垫在网页内容下面</span>
+      </div>
+      <label class="switch">
+        <input id="enabled" type="checkbox" />
+        <span></span>
+      </label>
+    </section>
+
+    <section class="row">
+      <div class="label">
+        <strong>强度</strong>
+        <span>标准够用；个别站点底色深时选强</span>
+      </div>
+      <select id="strength">
+        <option value="light">轻</option>
+        <option value="normal">标准</option>
+        <option value="strong">强</option>
+      </select>
+    </section>
+
+    <section class="row">
+      <div class="label">
+        <strong>明暗</strong>
+        <span>跟随页面：按正文颜色选深浅，白底站点不会变黑</span>
+      </div>
+      <select id="themeMode">
+        <option value="auto">跟随页面</option>
+        <option value="system">跟随系统</option>
+      </select>
+    </section>
+
+    <section class="row">
+      <div class="label">
+        <strong id="host">当前站点</strong>
+        <span id="hostState">—</span>
+      </div>
+      <button id="toggleHost" type="button">禁用本站</button>
+    </section>
+
+    <footer>
+      <button id="openNewTab" type="button" class="link">打开新标签页</button>
+      <span class="hint">新标签页 = 原图壁纸</span>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
